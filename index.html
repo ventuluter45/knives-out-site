@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Достать ножи | Knives Out</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Анимированный фон с частицами -->
+    <canvas id="particles"></canvas>
+
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="logo">🗡️ KNIVES OUT</div>
+        <ul class="nav-links">
+            <li><a href="#home">Главная</a></li>
+            <li><a href="#about">О фильме</a></li>
+            <li><a href="#characters">Персонажи</a></li>
+            <li><a href="#quotes">Цитаты</a></li>
+            <li><a href="#cast">Актёры</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <!-- Hero секция -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <!-- Можно добавить логотип картинкой -->
+            <!-- <img src="images/logo.png" alt="Knives Out Logo" class="hero-logo"> -->
+            <h1 class="title">
+                <span class="title-line">ДОСТАТЬ</span>
+                <span class="title-line accent">НОЖИ</span>
+            </h1>
+            <p class="subtitle">Каждый имеет мотив. Каждый — подозреваемый.</p>
+            <a href="#about" class="btn">Раскрыть тайну</a>
+        </div>
+        <div class="scroll-indicator">
+            <span>▼</span>
+        </div>
+    </section>
+
+    <!-- О фильме -->
+    <section id="about" class="about section">
+        <div class="container">
+            <h2 class="section-title reveal">О фильме</h2>
+            <div class="about-content reveal">
+                <div class="about-text">
+                    <p>
+                        Известный криминальный романист <strong>Харлан Тромби</strong> найден мёртвым 
+                        в своём особняке после празднования 85-летия. Частный детектив 
+                        <strong>Бенуа Блан</strong> прибывает расследовать дело и обнаруживает, 
+                        что под маской скорбящей семьи скрываются ложь, алчность и предательство.
+                    </p>
+                    <div class="stats">
+                        <div class="stat">
+                            <span class="stat-number" data-target="2019">0</span>
+                            <span class="stat-label">Год выхода</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-target="311">0</span>
+                            <span class="stat-label">Млн $ сборов</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-target="97">0</span>
+                            <span class="stat-label">% Rotten Tomatoes</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-poster">
+                    <div class="poster-frame">
+                        <!-- ЗАМЕНА НА ФОТО ПОСТЕРА -->
+                        <img src="out knives.jpg" alt="Постер фильма" class="main-poster-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Персонажи -->
+    <section id="characters" class="characters section">
+        <div class="container">
+            <h2 class="section-title reveal">Подозреваемые</h2>
+            <p class="section-subtitle reveal">Каждый из них что-то скрывает...</p>
+            <div class="characters-grid">
+                
+                <!-- Карточка Бенуа Блана -->
+                <div class="character-card reveal" data-suspect="blanc">
+                    <div class="card-image">
+                        <!-- ЗАМЕНА НА ФОТО ПЕРСОНАЖА -->
+                        <img src="ben.jpg" alt="Бенуа Блан">
+                    </div>
+                    <div class="card-content">
+                        <h3>Бенуа Блан</h3>
+                        <p class="role">Частный детектив</p>
+                        <p class="description">Южный джентльмен с острым умом и ещё более острым языком.</p>
+                    </div>
+                    <div class="card-overlay">
+                        <p>"Я следую за ароматом, как гончая за лисой."</p>
+                    </div>
+                </div>
+
+                <!-- Карточка Марты -->
+                <div class="character-card reveal" data-suspect="marta">
+                    <div class="card-image">
+                        <img src="marta.jpg" alt="Марта Кабрера">
+                    </div>
+                    <div class="card-content">
+                        <h3>Марта Кабрера</h3>
+                        <p class="role">Сиделка Харлана</p>
+                        <p class="description">Добрая душа в центре смертельной паутины лжи.</p>
+                    </div>
+                    <div class="card-overlay">
+                        <p>"Если я совру, меня вырвёт."</p>
+                    </div>
+                </div>
+
+                <!-- Карточка Рэнсома -->
+                <div class="character-card reveal" data-suspect="ransom">
+                    <div class="card-image">
+                        <img src="men2.jpg" alt="Рэнсом">
+                    </div>
+                    <div class="card-content">
+                        <h3>Рэнсом Драйсдейл</h3>
+                        <p class="role">Внук Харлана</p>
+                        <p class="description">Анархист, циник и главный подозреваемый.</p>
+                    </div>
+                    <div class="card-overlay">
+                        <p>"Это была бы идеальная криминальная загадка."</p>
+                    </div>
+                </div>
+
+                <!-- Остальные карточки по аналогии... -->
+                 <div class="character-card reveal" data-suspect="harlan">
+                    <div class="card-image">
+                        <img src="harlonjpg" alt="Харлан">
+                    </div>
+                    <div class="card-content">
+                        <h3>Харлан Тромби</h3>
+                        <p class="role">Писатель, жертва</p>
+                        <p class="description">Мастер загадок, написавший собственную последнюю главу.</p>
+                    </div>
+                    <div class="card-overlay">
+                        <p>"Иногда лучше быть мёртвым, чем жить в такой семье."</p>
+                    </div>
+                </div>
+
+                <div class="character-card reveal" data-suspect="linda">
+                    <div class="card-image">
+                        <img src="linda.jpg" alt="Линда">
+                    </div>
+                    <div class="card-content">
+                        <h3>Линда Драйсдейл</h3>
+                        <p class="role">Старшая дочь</p>
+                        <p class="description">Деловая акула, контролирующая всё и вся.</p>
+                    </div>
+                    <div class="card-overlay">
+                        <p>"Семья — это всё, что у нас есть."</p>
+                    </div>
+                </div>
+
+                <div class="character-card reveal" data-suspect="walt">
+                    <div class="card-image">
+                        <img src="men.jpg" alt="Уолт">
+                    </div>
+                    <div class="card-content">
+                        <h3>Уолт Тромби</h3>
+                        <p class="role">Сын Харлана</p>
+                        <p class="description">Продюсер, готовый на всё ради прав на экранизацию.</p>
+                    </div>
+                    <div class="card-overlay">
+                        <p>"Отец, не делай этого."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Цитаты (без изменений) -->
+    <section id="quotes" class="quotes section">
+        <div class="container">
+            <h2 class="section-title reveal">Культовые цитаты</h2>
+            <div class="quotes-carousel">
+                <div class="quote-card active">
+                    <div class="quote-mark">"</div>
+                    <p class="quote-text">Это была бы идеальная криминальная загадка, если бы не одно "но" — ты в ней не участвуешь.</p>
+                    <p class="quote-author">— Рэнсом Драйсдейл</p>
+                </div>
+                <div class="quote-card">
+                    <div class="quote-mark">"</div>
+                    <p class="quote-text">Я следую за ароматом, как гончая за лисой. И сейчас я чувствую запах лжи.</p>
+                    <p class="quote-author">— Бенуа Блан</p>
+                </div>
+                <div class="quote-card">
+                    <p class="quote-mark">"</p>
+                    <p class="quote-text">Когда я вру, меня вырвёт. Это как рефлекс. Это как... как аллергия на ложь.</p>
+                    <p class="quote-author">— Марта Кабрера</p>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <button class="carousel-btn prev">❮</button>
+                <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button class="carousel-btn next">❯</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Актёры -->
+    <section id="cast" class="cast section">
+        <div class="container">
+            <h2 class="section-title reveal">Актёрский состав</h2>
+            <div class="cast-grid">
+                <!-- ЗАМЕНА НА ФОТО АКТЕРОВ -->
+                <div class="cast-member reveal">
+                    <img src="Daniel_Craig_in_2021.jpg" alt="Дэниэл Крэйг" class="cast-photo">
+                    <h4>Дэниэл Крэйг</h4>
+                    <p>Бенуа Блан</p>
+                </div>
+                <div class="cast-member reveal">
+                    <img src="ana de armas.jpg" alt="Ана де Армас" class="cast-photo">
+                    <h4>Ана де Армас</h4>
+                    <p>Марта Кабрера</p>
+                </div>
+                <div class="cast-member reveal">
+                    <img src="chris.jpg" alt="Крис Эванс" class="cast-photo">
+                    <h4>Крис Эванс</h4>
+                    <p>Рэнсом Драйсдейл</p>
+                </div>
+                <div class="cast-member reveal">
+                    <img src="plamer2.jpg" alt="Кристофер Пламмер" class="cast-photo">
+                    <h4>Кристофер Пламмер</h4>
+                    <p>Харлан Тромби</p>
+                </div>
+                <div class="cast-member reveal">
+                    <img src="JamieLeeCurtis.jpg" alt="Джейми Ли Кёртис" class="cast-photo">
+                    <h4>Джейми Ли Кёртис</h4>
+                    <p>Линда Драйсдейл</p>
+                </div>
+                <div class="cast-member reveal">
+                    <img src="Michael_Shannon_cropped_2009.jpg" alt="Майкл Шэннон" class="cast-photo">
+                    <h4>Майкл Шэннон</h4>
+                    <p>Уолт Тромби</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">🗡️ KNIVES OUT</div>
+                <p class="footer-text">Фан-сайт Абдыманаповой Чынары из группы ИС1-25, посвящённый фильму Райана Джонсона "Достать ножи" (2019)</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link">📧</a>
+                    <a href="#" class="social-link">🎬</a>
+                    <a href="#" class="social-link">📷</a>
+                </div>
+                <p class="copyright">© 2019 Lionsgate Films. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
